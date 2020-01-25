@@ -12,10 +12,18 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  background: #bbbbbb;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(145deg, cornsilk 0%, bisque 50%, burlywood 100%);
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
 }
 
-.videoPlayer {
-  width: 640px;
-  height: 480px;
+video {
+  min-width: 728px;
+}
+
+footer {
+  position: absolute;
 }

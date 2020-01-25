@@ -8,19 +8,38 @@
     <title>HTML5 Video Player</title>
   </head>
   <body>
-    <main>
-      <header>
-        <h1>HTML5 Video Player</h1>
-      </header>
-      <article>
-        <video class="videoPlayer" controls>
-          <source
-            src="./assets/creatives/cametosup_512kb.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </article>
-    </main>
+    <h1 class="title">HTML5 Video Player</h1>
+
+    <div class="videoPlayer">
+      <video>
+        <source src="./assets/creatives/cametosup_512kb.mp4" type="video/mp4" />
+      </video>
+      <div class="videoControls">
+        <button class="playButton button">Play</button>
+        <button class="pauseButton button">Pause</button>
+        <button class="rewindButton button" data-rewind="-10">
+          Go back 10s
+        </button>
+        <button class="forwardButton button" data-forward="10">
+          Fast forward 10s
+        </button>
+        Volume<input
+          type="range"
+          min="0"
+          max="100"
+          class="volumeSlider slider"
+          value="50"
+        />
+        Progress<input
+          type="range"
+          min="0"
+          max="100"
+          class="progressSlider slider"
+          value="0"
+        />
+      </div>
+    </div>
+
+    <script src="./assets/js/player.js"></script>
   </body>
-  <script src="./assets/js/player.js"></script>
 </html>
